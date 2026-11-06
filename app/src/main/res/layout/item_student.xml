@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EduCenter.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_16"
+    android:layout_marginVertical="@dimen/spacing_6"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_12">
+
+        <!-- Avatar Initials Circle -->
+        <FrameLayout
+            android:id="@+id/layoutAvatar"
+            android:layout_width="@dimen/avatar_size_medium"
+            android:layout_height="@dimen/avatar_size_medium"
+            android:background="@drawable/bg_avatar_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAvatarInitial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-bold"
+                android:text="B"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <!-- Student Info -->
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-bold"
+            android:maxLines="1"
+            android:text="Hoàng Gia Bảo"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_size_subheading"
+            app:layout_constraintEnd_toStartOf="@+id/tvStudentStatus"
+            app:layout_constraintStart_toEndOf="@+id/layoutAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStudentCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Mã: HS001"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintStart_toEndOf="@+id/layoutAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvStudentName" />
+
+        <TextView
+            android:id="@+id/tvStudentGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:text="•  Khối 11"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStudentCode"
+            app:layout_constraintStart_toEndOf="@+id/tvStudentCode"
+            app:layout_constraintTop_toTopOf="@+id/tvStudentCode" />
+
+        <TextView
+            android:id="@+id/tvStudentPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="SĐT: 0971001001 • THPT Cầu Giấy"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/layoutAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvStudentCode" />
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/tvStudentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_success"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/status_active"
+            android:textColor="@color/success"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

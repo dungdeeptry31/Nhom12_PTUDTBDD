@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Top Toolbar with Back button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarStats"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-bold"
+            android:text="@string/title_statistics"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_heading" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Revenue Summary Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EduCenter.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/revenue_chart_title"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_subheading" />
+
+                    <!-- Custom Canvas Bar Chart -->
+                    <com.educenter.app.view.customview.BarChartView
+                        android:id="@+id/barChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="@dimen/spacing_12" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutRevenueBars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tuition Status Breakdown Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EduCenter.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/tuition_chart_title"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_subheading" />
+
+                    <!-- Custom Canvas Donut Chart -->
+                    <com.educenter.app.view.customview.PieChartView
+                        android:id="@+id/pieChartView"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:layout_marginBottom="@dimen/spacing_8" />
+
+                    <TextView
+                        android:id="@+id/tvTuitionBreakdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_8"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Đang tính toán..."
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Attendance Rate Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EduCenter.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/attendance_chart_title"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_subheading" />
+
+                    <TextView
+                        android:id="@+id/tvAttendanceBreakdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_8"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Đang tính toán..."
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Student by Grade Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EduCenter.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginBottom="@dimen/spacing_24">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/grade_chart_title"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_subheading" />
+
+                    <TextView
+                        android:id="@+id/tvGradeBreakdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_8"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Đang tính toán..."
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

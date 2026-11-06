@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Palette -->
+    <color name="primary">#1E3A8A</color>
+    <color name="primary_variant">#2563EB</color>
+    <color name="primary_light">#DBEAFE</color>
+    <color name="secondary">#4F46E5</color>
+    <color name="secondary_light">#E0E7FF</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#F1F5F9</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="surface_variant">#F8FAFC</color>
+
+    <!-- Typography Colors -->
+    <color name="text_main">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Outlines & Borders -->
+    <color name="border">#E2E8F0</color>
+    <color name="divider">#CBD5E1</color>
+
+    <!-- Status: Success -->
+    <color name="success">#15803D</color>
+    <color name="success_bg">#DCFCE7</color>
+    <color name="success_border">#86EFAC</color>
+
+    <!-- Status: Warning -->
+    <color name="warning">#B45309</color>
+    <color name="warning_bg">#FEF3C7</color>
+    <color name="warning_border">#FDE68A</color>
+
+    <!-- Status: Error -->
+    <color name="error">#B91C1C</color>
+    <color name="error_bg">#FEE2E2</color>
+    <color name="error_border">#FCA5A5</color>
+
+    <!-- Common Utilities -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="ripple_color">#1A1E3A8A</color>
+    <color name="shadow_color">#0F1E293B</color>
+
+    <!-- Avatar Backgrounds -->
+    <color name="avatar_bg_1">#3B82F6</color>
+    <color name="avatar_bg_2">#10B981</color>
+    <color name="avatar_bg_3">#8B5CF6</color>
+    <color name="avatar_bg_4">#F59E0B</color>
+    <color name="avatar_bg_5">#EC4899</color>
+    <color name="avatar_bg_6">#06B6D4</color>
+</resources>

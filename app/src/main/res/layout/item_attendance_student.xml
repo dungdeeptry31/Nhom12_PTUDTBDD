@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EduCenter.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_12">
+
+        <!-- Student Name & Code -->
+        <TextView
+            android:id="@+id/tvAttendanceStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-bold"
+            android:text="Nguyễn Văn A"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_size_body" />
+
+        <TextView
+            android:id="@+id/tvAttendanceStudentCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã HS: HS001"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption" />
+
+        <!-- Status Radio Group -->
+        <RadioGroup
+            android:id="@+id/rgAttendanceStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbPresent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Có mặt"
+                android:textColor="@color/success"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbLate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Đi muộn"
+                android:textColor="@color/warning"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbAbsent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vắng"
+                android:textColor="@color/error"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <!-- Optional Note Input -->
+        <EditText
+            android:id="@+id/etAttendanceNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_card_rounded"
+            android:hint="Ghi chú (ví dụ: có phép, đi muộn 10p)..."
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/spacing_8"
+            android:paddingVertical="@dimen/spacing_6"
+            android:textColor="@color/text_main"
+            android:textColorHint="@color/text_muted"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+
+    <item
+        android:id="@+id/nav_students"
+        android:icon="@drawable/ic_students"
+        android:title="@string/nav_students" />
+
+    <item
+        android:id="@+id/nav_classes"
+        android:icon="@drawable/ic_classes"
+        android:title="@string/nav_classes" />
+
+    <item
+        android:id="@+id/nav_tuition"
+        android:icon="@drawable/ic_tuition"
+        android:title="@string/nav_tuition" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile" />
+</menu>

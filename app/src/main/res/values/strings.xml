@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EduCenter</string>
+    <string name="app_slogan">Quản lý trung tâm học thêm thông minh &amp; hiệu quả</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Tổng quan</string>
+    <string name="nav_students">Học sinh</string>
+    <string name="nav_classes">Lớp học</string>
+    <string name="nav_tuition">Học phí</string>
+    <string name="nav_profile">Tài khoản</string>
+
+    <!-- Auth -->
+    <string name="login_title">Đăng Nhập</string>
+    <string name="login_subtitle">Chào mừng bạn quay trở lại EduCenter</string>
+    <string name="username_label">Tên đăng nhập</string>
+    <string name="username_hint">Nhập tên đăng nhập</string>
+    <string name="password_label">Mật khẩu</string>
+    <string name="password_hint">Nhập mật khẩu</string>
+    <string name="remember_login">Ghi nhớ đăng nhập</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="register_prompt">Chưa có tài khoản? Đăng ký ngay</string>
+    <string name="register_title">Đăng Ký Tài Khoản</string>
+    <string name="register_subtitle">Tạo tài khoản cán bộ quản trị hoặc giáo viên</string>
+    <string name="fullname_label">Họ và tên</string>
+    <string name="fullname_hint">Ví dụ: Nguyễn Văn An</string>
+    <string name="email_label">Email</string>
+    <string name="email_hint">Ví dụ: nguyenvana@gmail.com</string>
+    <string name="phone_label">Số điện thoại</string>
+    <string name="phone_hint">Ví dụ: 0912345678</string>
+    <string name="confirm_password_label">Xác nhận mật khẩu</string>
+    <string name="confirm_password_hint">Nhập lại mật khẩu</string>
+    <string name="btn_register">Đăng ký tài khoản</string>
+    <string name="login_prompt">Đã có tài khoản? Đăng nhập</string>
+    <string name="quick_demo_title">Đăng nhập nhanh (Quick Demo)</string>
+    <string name="demo_admin">Demo Admin</string>
+    <string name="demo_teacher">Demo Giáo viên</string>
+    <string name="demo_locked">Tài khoản bị khóa</string>
+
+    <!-- Roles -->
+    <string name="role_admin">Quản trị viên</string>
+    <string name="role_teacher">Giáo viên</string>
+    <string name="role_staff">Nhân viên</string>
+
+    <!-- Status Badges -->
+    <string name="status_open">Đang mở</string>
+    <string name="status_upcoming">Sắp khai giảng</string>
+    <string name="status_finished">Đã kết thúc</string>
+    <string name="status_locked">Đã khóa</string>
+    <string name="status_active">Hoạt động</string>
+    <string name="status_inactive">Ngừng hoạt động</string>
+    <string name="status_paid">Đã thanh toán</string>
+    <string name="status_partially_paid">Đóng một phần</string>
+    <string name="status_unpaid">Chưa thanh toán</string>
+    <string name="status_present">Có mặt</string>
+    <string name="status_absent">Vắng mặt</string>
+    <string name="status_late">Đi muộn</string>
+
+    <!-- Common Actions -->
+    <string name="btn_save">Lưu</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_delete">Xóa</string>
+    <string name="btn_edit">Chỉnh sửa</string>
+    <string name="btn_search">Tìm kiếm</string>
+    <string name="btn_filter">Bộ lọc</string>
+    <string name="btn_add">Thêm mới</string>
+    <string name="btn_add_student">Thêm học sinh</string>
+    <string name="btn_add_class">Thêm lớp học</string>
+    <string name="btn_close">Đóng</string>
+    <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_logout">Đăng xuất</string>
+    <string name="btn_retry">Thử lại</string>
+    <string name="btn_clear_filter">Xóa bộ lọc</string>
+
+    <!-- Dashboard & Stats -->
+    <string name="stat_students_count">Học sinh đang học</string>
+    <string name="stat_classes_count">Lớp đang mở</string>
+    <string name="stat_teachers_count">Giáo viên hoạt động</string>
+    <string name="stat_month_revenue">Doanh thu tháng</string>
+    <string name="recent_activities">Hoạt động gần đây</string>
+    <string name="quick_actions">Chức năng nhanh</string>
+    <string name="revenue_chart_title">Biểu đồ doanh thu 6 tháng gần nhất</string>
+    <string name="grade_chart_title">Phân bố học sinh theo khối lớp</string>
+    <string name="tuition_chart_title">Tỷ lệ tình trạng học phí</string>
+    <string name="attendance_chart_title">Tỷ lệ chuyên cần học sinh</string>
+
+    <!-- Management Modules -->
+    <string name="title_students">Quản Lý Học Sinh</string>
+    <string name="title_teachers">Quản Lý Giáo Viên</string>
+    <string name="title_classes">Quản Lý Lớp Học</string>
+    <string name="title_subjects">Quản Lý Môn Học</string>
+    <string name="title_rooms">Quản Lý Phòng Học</string>
+    <string name="title_schedules">Lịch Học &amp; Thời Khóa Biểu</string>
+    <string name="title_attendance">Điểm Danh Lớp Học</string>
+    <string name="title_tuition">Quản Lý Học Phí &amp; Thu Tiền</string>
+    <string name="title_exam_results">Kết Quả Học Tập &amp; Bảng Điểm</string>
+    <string name="title_statistics">Báo Cáo &amp; Thống Kê</string>
+    <string name="title_profile">Hồ Sơ Cá Nhân</string>
+
+    <!-- Form Labels & Placeholders -->
+    <string name="student_code">Mã học sinh</string>
+    <string name="student_name">Họ và tên học sinh</string>
+    <string name="date_of_birth">Ngày sinh</string>
+    <string name="gender">Giới tính</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="parent_name">Họ tên phụ huynh</string>
+    <string name="parent_phone">Số điện thoại phụ huynh</string>
+    <string name="school_name">Trường học</string>
+    <string name="grade_level">Khối lớp</string>
+    <string name="address">Địa chỉ thường trú</string>
+
+    <string name="class_code">Mã lớp học</string>
+    <string name="class_name">Tên lớp học</string>
+    <string name="subject_select">Môn học</string>
+    <string name="teacher_select">Giáo viên phụ trách</string>
+    <string name="room_select">Phòng học</string>
+    <string name="max_students">Sĩ số tối đa</string>
+    <string name="tuition_fee">Học phí (VNĐ/tháng)</string>
+    <string name="start_date">Ngày khai giảng</string>
+    <string name="end_date">Ngày bế giảng</string>
+    <string name="day_of_week">Thứ trong tuần</string>
+    <string name="start_time">Giờ bắt đầu</string>
+    <string name="end_time">Giờ kết thúc</string>
+
+    <string name="teacher_name">Họ tên giáo viên</string>
+    <string name="teacher_specialization">Chuyên môn</string>
+    <string name="teacher_degree">Bằng cấp</string>
+    <string name="teacher_experience">Kinh nghiệm (năm)</string>
+
+    <string name="room_name">Tên phòng học</string>
+    <string name="room_capacity">Sức chứa tối đa (chỗ)</string>
+    <string name="room_location">Vị trí / Tầng</string>
+
+    <string name="subject_code">Mã môn học</string>
+    <string name="subject_name">Tên môn học</string>
+    <string name="subject_description">Mô tả môn học</string>
+
+    <string name="invoice_code">Mã hóa đơn</string>
+    <string name="invoice_amount">Số tiền phải thu</string>
+    <string name="invoice_paid">Đã thanh toán</string>
+    <string name="invoice_debt">Còn nợ</string>
+    <string name="invoice_due_date">Hạn nộp học phí</string>
+    <string name="invoice_month">Tháng thu tiền</string>
+    <string name="payment_amount">Số tiền đóng lần này</string>
+    <string name="payment_method">Phương thức thanh toán</string>
+    <string name="method_cash">Tiền mặt</string>
+    <string name="method_transfer">Chuyển khoản</string>
+    <string name="payment_date">Ngày nộp</string>
+    <string name="note">Ghi chú</string>
+
+    <!-- Empty and Loading States -->
+    <string name="empty_data_title">Không tìm thấy dữ liệu phù hợp</string>
+    <string name="empty_data_desc">Thử tìm kiếm với từ khóa khác hoặc điều chỉnh bộ lọc.</string>
+    <string name="loading_data">Đang tải dữ liệu...</string>
+
+    <!-- Errors & Validation -->
+    <string name="error_empty_field">Trường này không được để trống</string>
+    <string name="error_invalid_phone">Số điện thoại không hợp lệ (10 chữ số)</string>
+    <string name="error_invalid_email">Email không đúng định dạng</string>
+    <string name="error_password_min">Mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="error_password_mismatch">Mật khẩu xác nhận không khớp</string>
+    <string name="error_account_locked">Tài khoản của bạn đã bị khóa, vui lòng liên hệ Quản trị viên!</string>
+    <string name="error_login_failed">Tên đăng nhập hoặc mật khẩu không chính xác!</string>
+    <string name="error_user_exists">Tên đăng nhập đã tồn tại trong hệ thống!</string>
+    <string name="error_permission_denied">Bạn không có quyền thực hiện thao tác này!</string>
+</resources>

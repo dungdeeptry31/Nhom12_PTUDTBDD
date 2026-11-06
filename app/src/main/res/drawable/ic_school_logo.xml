@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+  <!-- Gradient background or stylish circle -->
+  <path
+      android:fillColor="#1E3A8A"
+      android:pathData="M48,8C25.91,8 8,25.91 8,48s17.91,40 40,40 40,-17.91 40,-40S70.09,8 48,8z"/>
+  <!-- Graduation cap / Book motif in white/gold -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M48,26L20,38l28,12 24,-10.29V56h4V38L48,26z M28,49.5v12L48,70l20,-8.5v-12L48,58 28,49.5z"/>
+  <!-- Accent badge star/dot -->
+  <path
+      android:fillColor="#FBBF24"
+      android:pathData="M48,34l3,6 7,1 -5,5 1,7 -6,-3 -6,3 1,-7 -5,-5 7,-1z"/>
+</vector>

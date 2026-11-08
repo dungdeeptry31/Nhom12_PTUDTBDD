@@ -22,9 +22,12 @@ import com.educenter.app.model.ClassRoom;
 import com.educenter.app.utils.Constants;
 import com.educenter.app.utils.CurrencyUtils;
 import com.educenter.app.utils.DateUtils;
+import com.educenter.app.data.local.SessionManager;
 import com.educenter.app.view.dialog.AttendanceBottomSheet;
 import com.educenter.app.view.dialog.ClassBottomSheet;
+import com.educenter.app.view.dialog.ClassScheduleBottomSheet;
 import com.educenter.app.view.dialog.EnrollStudentBottomSheet;
+import com.educenter.app.view.dialog.ExamResultsBottomSheet;
 import com.educenter.app.viewmodel.ClassViewModel;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -137,13 +140,26 @@ public class ClassFragment extends Fragment {
     }
 
     private void onClassSelected(ClassRoom c) {
-        String[] options = {
-                "Xem chi tiết lớp học",
-                "Điểm danh buổi học",
-                "Xếp học sinh vào lớp",
-                "Chỉnh sửa lớp học",
-                "Xóa lớp học"
-        };
+        SessionManager session = SessionManager.getInstance(requireContext());
+        String[] options;
+        if (session.isTeacher()) {
+            options = new String[]{
+                    "Xem chi tiết lớp học",
+                    "Thời khóa biểu (Lịch học)",
+                    "Bảng điểm / Kết quả học tập",
+                    "Điểm danh buổi học"
+            };
+        } else {
+            options = new String[]{
+                    "Xem chi tiết lớp học",
+                    "Thời khóa biểu (Lịch học)",
+                    "Bảng điểm / Kết quả học tập",
+                    "Điểm danh buổi học",
+                    "Xếp học sinh vào lớp",
+                    "Chỉnh sửa lớp học",
+                    "Xóa lớp học"
+            };
+        }
 
         new MaterialAlertDialogBuilder(requireContext())
                 .setTitle(c.getName() + " (" + c.getCode() + ")")
@@ -151,12 +167,16 @@ public class ClassFragment extends Fragment {
                     if (which == 0) {
                         showClassDetailsDialog(c);
                     } else if (which == 1) {
-                        AttendanceBottomSheet.newInstance(c).show(getChildFragmentManager(), "AttendanceBottomSheet");
+                        ClassScheduleBottomSheet.newInstance(c).show(getChildFragmentManager(), "ClassScheduleBottomSheet");
                     } else if (which == 2) {
-                        EnrollStudentBottomSheet.newInstance(c).show(getChildFragmentManager(), "EnrollStudentBottomSheet");
+                        ExamResultsBottomSheet.newInstanceForClass(c).show(getChildFragmentManager(), "ExamResultsBottomSheet");
                     } else if (which == 3) {
-                        ClassBottomSheet.newInstance(c).show(getChildFragmentManager(), "ClassBottomSheet");
+                        AttendanceBottomSheet.newInstance(c).show(getChildFragmentManager(), "AttendanceBottomSheet");
                     } else if (which == 4) {
+                        EnrollStudentBottomSheet.newInstance(c).show(getChildFragmentManager(), "EnrollStudentBottomSheet");
+                    } else if (which == 5) {
+                        ClassBottomSheet.newInstance(c).show(getChildFragmentManager(), "ClassBottomSheet");
+                    } else if (which == 6) {
                         confirmDeleteClass(c);
                     }
                 })

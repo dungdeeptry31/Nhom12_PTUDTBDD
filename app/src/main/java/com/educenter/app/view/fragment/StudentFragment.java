@@ -17,9 +17,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.educenter.app.R;
 import com.educenter.app.adapter.StudentAdapter;
+import com.educenter.app.data.local.SessionManager;
 import com.educenter.app.databinding.FragmentStudentBinding;
 import com.educenter.app.model.Student;
 import com.educenter.app.utils.DateUtils;
+import com.educenter.app.view.dialog.ExamResultsBottomSheet;
 import com.educenter.app.view.dialog.StudentBottomSheet;
 import com.educenter.app.viewmodel.StudentViewModel;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -133,7 +135,23 @@ public class StudentFragment extends Fragment {
     }
 
     private void onStudentSelected(Student student) {
-        String[] options = {"Xem thông tin chi tiết", "Chỉnh sửa thông tin", "Xóa học sinh"};
+        SessionManager session = SessionManager.getInstance(requireContext());
+        String[] options;
+        if (session.isTeacher()) {
+            options = new String[]{
+                    "Xem thông tin chi tiết",
+                    "Bảng điểm / Kết quả học tập",
+                    "Chỉnh sửa thông tin"
+            };
+        } else {
+            options = new String[]{
+                    "Xem thông tin chi tiết",
+                    "Bảng điểm / Kết quả học tập",
+                    "Chỉnh sửa thông tin",
+                    "Xóa học sinh"
+            };
+        }
+
         new MaterialAlertDialogBuilder(requireContext())
                 .setTitle(student.getFullName() + " (" + student.getStudentCode() + ")")
                 .setItems(options, (dialog, which) -> {
@@ -141,9 +159,12 @@ public class StudentFragment extends Fragment {
                         // Details
                         showStudentDetailsDialog(student);
                     } else if (which == 1) {
+                        // Exam results / Academic performance
+                        ExamResultsBottomSheet.newInstanceForStudent(student).show(getChildFragmentManager(), "ExamResultsBottomSheet");
+                    } else if (which == 2) {
                         // Edit
                         StudentBottomSheet.newInstance(student).show(getChildFragmentManager(), "StudentBottomSheet");
-                    } else if (which == 2) {
+                    } else if (which == 3) {
                         // Delete
                         confirmDeleteStudent(student);
                     }

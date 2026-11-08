@@ -394,6 +394,88 @@ public class ClassRepository {
         });
     }
 
+    public void insertRoom(Room room, DataCallback<Long> callback) {
+        executor.execute(() -> {
+            if (room.getName() == null || room.getName().trim().isEmpty()) {
+                mainHandler.post(() -> callback.onError("Tên phòng học không được để trống!"));
+                return;
+            }
+            if (room.getCapacity() <= 0) {
+                mainHandler.post(() -> callback.onError("Sức chứa phòng học phải lớn hơn 0!"));
+                return;
+            }
+
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            // TC08: check duplicate room name
+            Cursor check = db.rawQuery(
+                    "SELECT COUNT(*) FROM " + DatabaseHelper.TABLE_ROOMS + " WHERE UPPER(name) = ?",
+                    new String[]{room.getName().trim().toUpperCase()}
+            );
+            try {
+                if (check.moveToFirst() && check.getInt(0) > 0) {
+                    mainHandler.post(() -> callback.onError("Tên phòng học đã tồn tại!"));
+                    return;
+                }
+            } finally {
+                check.close();
+            }
+
+            ContentValues cv = new ContentValues();
+            cv.put("name", room.getName().trim());
+            cv.put("capacity", room.getCapacity());
+            cv.put("location", room.getLocation() != null ? room.getLocation().trim() : "");
+            cv.put("active", 1);
+
+            long id = db.insert(DatabaseHelper.TABLE_ROOMS, null, cv);
+            if (id > 0) {
+                mainHandler.post(() -> callback.onSuccess(id));
+            } else {
+                mainHandler.post(() -> callback.onError("Thêm phòng học thất bại."));
+            }
+        });
+    }
+
+    public void deleteRoom(long roomId, DataCallback<Boolean> callback) {
+        executor.execute(() -> {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            // TC11: Check if room is used in classes
+            Cursor classCheck = db.rawQuery(
+                    "SELECT COUNT(*) FROM " + DatabaseHelper.TABLE_CLASSES + " WHERE room_id = ?",
+                    new String[]{String.valueOf(roomId)}
+            );
+            try {
+                if (classCheck.moveToFirst() && classCheck.getInt(0) > 0) {
+                    mainHandler.post(() -> callback.onError("Không thể xóa phòng học vì đang có lớp học sử dụng phòng này!"));
+                    return;
+                }
+            } finally {
+                classCheck.close();
+            }
+
+            // TC11: Check if room is used in schedules
+            Cursor scheduleCheck = db.rawQuery(
+                    "SELECT COUNT(*) FROM " + DatabaseHelper.TABLE_SCHEDULES + " WHERE room_id = ?",
+                    new String[]{String.valueOf(roomId)}
+            );
+            try {
+                if (scheduleCheck.moveToFirst() && scheduleCheck.getInt(0) > 0) {
+                    mainHandler.post(() -> callback.onError("Không thể xóa phòng học vì đang có lịch học sử dụng phòng này!"));
+                    return;
+                }
+            } finally {
+                scheduleCheck.close();
+            }
+
+            int rows = db.delete(DatabaseHelper.TABLE_ROOMS, "id = ?", new String[]{String.valueOf(roomId)});
+            if (rows > 0) {
+                mainHandler.post(() -> callback.onSuccess(true));
+            } else {
+                mainHandler.post(() -> callback.onError("Xóa phòng học thất bại."));
+            }
+        });
+    }
+
     private ClassRoom parseClass(Cursor cursor) {
         ClassRoom c = new ClassRoom(
                 cursor.getLong(cursor.getColumnIndexOrThrow("id")),

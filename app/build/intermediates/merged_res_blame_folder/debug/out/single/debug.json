@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_rooms.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_payment_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_payment_sheet.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_splash.xml"
     },
@@ -20,32 +24,28 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_recent_activity.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_activity_main.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_bg_badge_success.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\bg_badge_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_add_schedule.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_add_schedule.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_classes.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_classes.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_lock.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_fragment_class.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_class.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_dialog_student_bottom_sheet.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/dialog_student_bottom_sheet.xml"
-    },
-    {
-        "merged": "com.educenter.app-merged_res-34:/layout_dialog_class_bottom_sheet.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/dialog_class_bottom_sheet.xml"
-    },
-    {
-        "merged": "com.educenter.app-merged_res-34:/layout_fragment_class.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/fragment_class.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_student_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_student_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_bg_badge_error.xml.flat",
@@ -56,68 +56,100 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_subjects.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_item_attendance_student.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/item_attendance_student.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_item_exam_result.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_exam_result.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_arrow_back.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_arrow_back.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_tuition.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_tuition.xml"
-    },
-    {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_search.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_search.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_exam_results_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_exam_results_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_tuition.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_tuition.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_calendar.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_calendar.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_dialog_enroll_student.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/dialog_enroll_student.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_class_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_class_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_bg_card_rounded.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\bg_card_rounded.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_bg_bottom_sheet.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\bg_bottom_sheet.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_attendance_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_attendance_sheet.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_dialog_attendance_sheet.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/dialog_attendance_sheet.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_class_schedule_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_class_schedule_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_bg_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\bg_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_school_logo.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_school_logo.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_activity_statistics.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_statistics.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_item_attendance_student.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_attendance_student.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_profile.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_activity_statistics.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_statistics.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\menu_bottom_nav_menu.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\menu\\bottom_nav_menu.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_statistics.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_statistics.xml"
     },
     {
+        "merged": "com.educenter.app-merged_res-34:/drawable_ic_schedule.xml.flat",
+        "source": "com.educenter.app-main-36:/drawable/ic_schedule.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_attendance.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_attendance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_enroll_student.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_enroll_student.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\color_selector_bottom_nav.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\color\\selector_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_change_password.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_item_schedule.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_schedule.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_students.xml.flat",
@@ -128,16 +160,8 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_tuition.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_activity_statistics.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/activity_statistics.xml"
-    },
-    {
-        "merged": "com.educenter.app-merged_res-34:/layout_dialog_payment_sheet.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/dialog_payment_sheet.xml"
-    },
-    {
-        "merged": "com.educenter.app-merged_res-34:/layout_fragment_profile.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_add_exam_result.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_add_exam_result.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_item_class.xml.flat",
@@ -160,6 +184,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_add_room.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_add_room.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_dashboard.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_dashboard.xml"
     },
@@ -168,8 +196,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_student.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/color_selector_bottom_nav.xml.flat",
-        "source": "com.educenter.app-main-36:/color/selector_bottom_nav.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\layout_dialog_tuition_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_tuition_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.educenter.app-merged_res-34:/drawable_ic_delete.xml.flat",
+        "source": "com.educenter.app-main-36:/drawable/ic_delete.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_teachers.xml.flat",
@@ -196,16 +228,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\bg_badge_warning.xml"
     },
     {
-        "merged": "com.educenter.app-merged_res-34:/layout_fragment_student.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/fragment_student.xml"
+        "merged": "com.educenter.app-merged_res-34:/drawable_bg_sheet_handle.xml.flat",
+        "source": "com.educenter.app-main-36:/drawable/bg_sheet_handle.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_time.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\drawable\\ic_time.xml"
-    },
-    {
-        "merged": "com.educenter.app-merged_res-34:/layout_fragment_dashboard.xml.flat",
-        "source": "com.educenter.app-main-36:/layout/fragment_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-merged_res-34:\\drawable_ic_more.xml.flat",

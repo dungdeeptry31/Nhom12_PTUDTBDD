@@ -59,6 +59,7 @@
     <dimen name="spacing_8">8dp</dimen>
     <dimen name="text_size_body">14sp</dimen>
     <dimen name="text_size_body_small">12sp</dimen>
+    <dimen name="text_size_button">15sp</dimen>
     <dimen name="text_size_caption">11sp</dimen>
     <dimen name="text_size_heading">18sp</dimen>
     <dimen name="text_size_large_title">24sp</dimen>

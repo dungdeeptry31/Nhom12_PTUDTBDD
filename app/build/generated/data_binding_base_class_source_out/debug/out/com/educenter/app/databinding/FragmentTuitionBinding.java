@@ -19,6 +19,7 @@ import com.educenter.app.R;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -52,6 +53,9 @@ public final class FragmentTuitionBinding implements ViewBinding {
   public final EditText etSearchTuition;
 
   @NonNull
+  public final ExtendedFloatingActionButton fabAddInvoice;
+
+  @NonNull
   public final LinearLayout layoutEmptyState;
 
   @NonNull
@@ -67,8 +71,9 @@ public final class FragmentTuitionBinding implements ViewBinding {
       @NonNull ImageView btnClearSearch, @NonNull MaterialCardView cardSearch,
       @NonNull Chip chipAllTuition, @NonNull ChipGroup chipGroupTuition, @NonNull Chip chipPaid,
       @NonNull Chip chipPartial, @NonNull Chip chipUnpaid, @NonNull EditText etSearchTuition,
-      @NonNull LinearLayout layoutEmptyState, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView rvTuition, @NonNull HorizontalScrollView scrollFilters) {
+      @NonNull ExtendedFloatingActionButton fabAddInvoice, @NonNull LinearLayout layoutEmptyState,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView rvTuition,
+      @NonNull HorizontalScrollView scrollFilters) {
     this.rootView = rootView;
     this.btnClearSearch = btnClearSearch;
     this.cardSearch = cardSearch;
@@ -78,6 +83,7 @@ public final class FragmentTuitionBinding implements ViewBinding {
     this.chipPartial = chipPartial;
     this.chipUnpaid = chipUnpaid;
     this.etSearchTuition = etSearchTuition;
+    this.fabAddInvoice = fabAddInvoice;
     this.layoutEmptyState = layoutEmptyState;
     this.progressBar = progressBar;
     this.rvTuition = rvTuition;
@@ -159,6 +165,12 @@ public final class FragmentTuitionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fabAddInvoice;
+      ExtendedFloatingActionButton fabAddInvoice = ViewBindings.findChildViewById(rootView, id);
+      if (fabAddInvoice == null) {
+        break missingId;
+      }
+
       id = R.id.layoutEmptyState;
       LinearLayout layoutEmptyState = ViewBindings.findChildViewById(rootView, id);
       if (layoutEmptyState == null) {
@@ -185,7 +197,7 @@ public final class FragmentTuitionBinding implements ViewBinding {
 
       return new FragmentTuitionBinding((ConstraintLayout) rootView, btnClearSearch, cardSearch,
           chipAllTuition, chipGroupTuition, chipPaid, chipPartial, chipUnpaid, etSearchTuition,
-          layoutEmptyState, progressBar, rvTuition, scrollFilters);
+          fabAddInvoice, layoutEmptyState, progressBar, rvTuition, scrollFilters);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

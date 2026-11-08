@@ -23,6 +23,7 @@ import com.educenter.app.utils.Constants;
 import com.educenter.app.utils.CurrencyUtils;
 import com.educenter.app.utils.DateUtils;
 import com.educenter.app.view.dialog.PaymentBottomSheet;
+import com.educenter.app.view.dialog.TuitionBottomSheet;
 import com.educenter.app.viewmodel.TuitionViewModel;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -56,6 +57,10 @@ public class TuitionFragment extends Fragment {
         setupRecyclerView();
         setupSearchAndFilter();
         observeViewModel();
+
+        binding.fabAddInvoice.setOnClickListener(v -> {
+            TuitionBottomSheet.newInstance().show(getChildFragmentManager(), "TuitionBottomSheet");
+        });
 
         tuitionViewModel.loadInvoices("", null, null, null);
     }

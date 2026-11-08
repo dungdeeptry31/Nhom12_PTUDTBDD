@@ -119,10 +119,52 @@
                     android:text="Toàn quyền quản lý học sinh, giáo viên, lớp học, tài chính và hệ thống"
                     android:textColor="@color/text_main"
                     android:textSize="@dimen/text_size_body" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/spacing_12"
+                    android:background="@color/border" />
+
+                <!-- Change Password Button -->
+                <LinearLayout
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/spacing_8">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_lock"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_12"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Đổi mật khẩu tài khoản"
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/text_size_body" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textColor="@color/text_muted"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Admin Management Card (Teachers & Subjects) -->
+        <!-- Admin Management Card (Teachers, Subjects, Rooms) -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardAdminTools"
             style="@style/Widget.EduCenter.CardView"
@@ -209,6 +251,47 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-medium"
                         android:text="Quản lý Môn học"
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/text_size_body" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textColor="@color/text_muted"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border" />
+
+                <!-- Manage Rooms Button -->
+                <LinearLayout
+                    android:id="@+id/btnManageRooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/spacing_8">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_rooms"
+                        app:tint="@color/warning" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_12"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Quản lý Phòng học"
                         android:textColor="@color/text_main"
                         android:textSize="@dimen/text_size_body" />
 

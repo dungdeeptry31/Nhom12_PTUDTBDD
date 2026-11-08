@@ -23,7 +23,13 @@ public final class FragmentProfileBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final LinearLayout btnChangePassword;
+
+  @NonNull
   public final MaterialButton btnLogout;
+
+  @NonNull
+  public final LinearLayout btnManageRooms;
 
   @NonNull
   public final LinearLayout btnManageSubjects;
@@ -49,13 +55,17 @@ public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   public final TextView tvRoleDescription;
 
-  private FragmentProfileBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnLogout,
-      @NonNull LinearLayout btnManageSubjects, @NonNull LinearLayout btnManageTeachers,
-      @NonNull MaterialCardView cardAdminTools, @NonNull TextView tvAvatarInitial,
-      @NonNull TextView tvProfileFullName, @NonNull TextView tvProfileRoleBadge,
-      @NonNull TextView tvProfileUsername, @NonNull TextView tvRoleDescription) {
+  private FragmentProfileBinding(@NonNull ScrollView rootView,
+      @NonNull LinearLayout btnChangePassword, @NonNull MaterialButton btnLogout,
+      @NonNull LinearLayout btnManageRooms, @NonNull LinearLayout btnManageSubjects,
+      @NonNull LinearLayout btnManageTeachers, @NonNull MaterialCardView cardAdminTools,
+      @NonNull TextView tvAvatarInitial, @NonNull TextView tvProfileFullName,
+      @NonNull TextView tvProfileRoleBadge, @NonNull TextView tvProfileUsername,
+      @NonNull TextView tvRoleDescription) {
     this.rootView = rootView;
+    this.btnChangePassword = btnChangePassword;
     this.btnLogout = btnLogout;
+    this.btnManageRooms = btnManageRooms;
     this.btnManageSubjects = btnManageSubjects;
     this.btnManageTeachers = btnManageTeachers;
     this.cardAdminTools = cardAdminTools;
@@ -93,9 +103,21 @@ public final class FragmentProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnChangePassword;
+      LinearLayout btnChangePassword = ViewBindings.findChildViewById(rootView, id);
+      if (btnChangePassword == null) {
+        break missingId;
+      }
+
       id = R.id.btnLogout;
       MaterialButton btnLogout = ViewBindings.findChildViewById(rootView, id);
       if (btnLogout == null) {
+        break missingId;
+      }
+
+      id = R.id.btnManageRooms;
+      LinearLayout btnManageRooms = ViewBindings.findChildViewById(rootView, id);
+      if (btnManageRooms == null) {
         break missingId;
       }
 
@@ -147,9 +169,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((ScrollView) rootView, btnLogout, btnManageSubjects,
-          btnManageTeachers, cardAdminTools, tvAvatarInitial, tvProfileFullName, tvProfileRoleBadge,
-          tvProfileUsername, tvRoleDescription);
+      return new FragmentProfileBinding((ScrollView) rootView, btnChangePassword, btnLogout,
+          btnManageRooms, btnManageSubjects, btnManageTeachers, cardAdminTools, tvAvatarInitial,
+          tvProfileFullName, tvProfileRoleBadge, tvProfileUsername, tvRoleDescription);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

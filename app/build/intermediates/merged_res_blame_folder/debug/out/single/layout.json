@@ -1,43 +1,59 @@
 [
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\fragment_class.xml",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_class.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\dialog_student_bottom_sheet.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_student_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\activity_main.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/activity_statistics.xml",
-        "source": "com.educenter.app-main-36:/layout/activity_statistics.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\fragment_class.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_class.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\dialog_class_bottom_sheet.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_class_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\dialog_payment_sheet.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_payment_sheet.xml"
+    },
+    {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_exam_results_sheet.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_exam_results_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\item_student.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_student.xml"
     },
     {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_class_schedule_sheet.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_class_schedule_sheet.xml"
+    },
+    {
         "merged": "com.educenter.app-mergeDebugResources-33:/layout/fragment_profile.xml",
         "source": "com.educenter.app-main-36:/layout/fragment_profile.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_payment_sheet.xml",
-        "source": "com.educenter.app-main-36:/layout/dialog_payment_sheet.xml"
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_add_exam_result.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_add_exam_result.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\fragment_profile.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_profile.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\dialog_attendance_sheet.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_attendance_sheet.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\item_class.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_class.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_attendance_sheet.xml",
-        "source": "com.educenter.app-main-36:/layout/dialog_attendance_sheet.xml"
-    },
-    {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/activity_main.xml",
-        "source": "com.educenter.app-main-36:/layout/activity_main.xml"
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_change_password.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_change_password.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\activity_splash.xml",
@@ -48,10 +64,6 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_tuition.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_student_bottom_sheet.xml",
-        "source": "com.educenter.app-main-36:/layout/dialog_student_bottom_sheet.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\activity_statistics.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_statistics.xml"
     },
@@ -60,44 +72,52 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_login.xml"
     },
     {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/fragment_tuition.xml",
+        "source": "com.educenter.app-main-36:/layout/fragment_tuition.xml"
+    },
+    {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_add_room.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_add_room.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\item_tuition.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_tuition.xml"
+    },
+    {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/item_exam_result.xml",
+        "source": "com.educenter.app-main-36:/layout/item_exam_result.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\activity_register.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_class_bottom_sheet.xml",
-        "source": "com.educenter.app-main-36:/layout/dialog_class_bottom_sheet.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\item_recent_activity.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_recent_activity.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/fragment_dashboard.xml",
-        "source": "com.educenter.app-main-36:/layout/fragment_dashboard.xml"
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/item_schedule.xml",
+        "source": "com.educenter.app-main-36:/layout/item_schedule.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/fragment_student.xml",
-        "source": "com.educenter.app-main-36:/layout/fragment_student.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\dialog_enroll_student.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\dialog_enroll_student.xml"
+    },
+    {
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_add_schedule.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_add_schedule.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\fragment_student.xml",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\fragment_student.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/item_attendance_student.xml",
-        "source": "com.educenter.app-main-36:/layout/item_attendance_student.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\item_attendance_student.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-main-36:\\layout\\item_attendance_student.xml"
     },
     {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_enroll_student.xml",
-        "source": "com.educenter.app-main-36:/layout/dialog_enroll_student.xml"
-    },
-    {
-        "merged": "com.educenter.app-mergeDebugResources-33:/layout/fragment_class.xml",
-        "source": "com.educenter.app-main-36:/layout/fragment_class.xml"
+        "merged": "com.educenter.app-mergeDebugResources-33:/layout/dialog_tuition_bottom_sheet.xml",
+        "source": "com.educenter.app-main-36:/layout/dialog_tuition_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.educenter.app-mergeDebugResources-33:\\layout\\fragment_dashboard.xml",

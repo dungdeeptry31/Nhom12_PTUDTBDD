@@ -13,9 +13,14 @@ import androidx.fragment.app.Fragment;
 
 import com.educenter.app.R;
 import com.educenter.app.data.local.SessionManager;
+import com.educenter.app.databinding.DialogAddRoomBinding;
+import com.educenter.app.databinding.DialogChangePasswordBinding;
 import com.educenter.app.databinding.FragmentProfileBinding;
+import com.educenter.app.model.Room;
 import com.educenter.app.model.Subject;
 import com.educenter.app.model.Teacher;
+import com.educenter.app.repository.AuthRepository;
+import com.educenter.app.repository.ClassRepository;
 import com.educenter.app.repository.DataCallback;
 import com.educenter.app.repository.SubjectRepository;
 import com.educenter.app.repository.TeacherRepository;
@@ -58,10 +63,12 @@ public class ProfileFragment extends Fragment {
             binding.cardAdminTools.setVisibility(View.VISIBLE);
             binding.btnManageTeachers.setOnClickListener(v -> showTeacherManagementDialog());
             binding.btnManageSubjects.setOnClickListener(v -> showSubjectManagementDialog());
+            binding.btnManageRooms.setOnClickListener(v -> showRoomManagementDialog());
         } else {
             binding.cardAdminTools.setVisibility(View.GONE);
         }
 
+        binding.btnChangePassword.setOnClickListener(v -> showChangePasswordDialog());
         binding.btnLogout.setOnClickListener(v -> confirmLogout());
     }
 
@@ -220,6 +227,169 @@ public class ProfileFragment extends Fragment {
                     }
                 })
                 .setNegativeButton("Đóng", null)
+                .show();
+    }
+
+    private void showRoomManagementDialog() {
+        ClassRepository repo = new ClassRepository(requireContext());
+        repo.getAllRooms(new DataCallback<List<Room>>() {
+            @Override
+            public void onSuccess(List<Room> rooms) {
+                List<String> items = new ArrayList<>();
+                items.add("➕ Thêm phòng học mới");
+                for (Room r : rooms) {
+                    items.add(r.getName() + " (" + r.getCapacity() + " chỗ ngồi)"
+                            + (r.getLocation() != null && !r.getLocation().isEmpty() ? " - " + r.getLocation() : ""));
+                }
+
+                new MaterialAlertDialogBuilder(requireContext())
+                        .setTitle("Quản lý Phòng học (" + rooms.size() + ")")
+                        .setItems(items.toArray(new String[0]), (dialog, which) -> {
+                            if (which == 0) {
+                                showAddRoomDialog(repo);
+                            } else {
+                                Room selected = rooms.get(which - 1);
+                                showRoomActionDialog(selected, repo);
+                            }
+                        })
+                        .setNegativeButton("Đóng", null)
+                        .show();
+            }
+
+            @Override
+            public void onError(String message) {
+                Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void showAddRoomDialog(ClassRepository repo) {
+        DialogAddRoomBinding dialogBinding = DialogAddRoomBinding.inflate(getLayoutInflater());
+
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Thêm phòng học mới")
+                .setView(dialogBinding.getRoot())
+                .setPositiveButton("Lưu", (dialog, which) -> {
+                    String name = dialogBinding.etRoomName.getText() != null
+                            ? dialogBinding.etRoomName.getText().toString().trim() : "";
+                    String capStr = dialogBinding.etCapacity.getText() != null
+                            ? dialogBinding.etCapacity.getText().toString().trim() : "";
+                    String location = dialogBinding.etLocation.getText() != null
+                            ? dialogBinding.etLocation.getText().toString().trim() : "";
+
+                    if (name.isEmpty()) {
+                        Toast.makeText(requireContext(), "Vui lòng nhập tên phòng học!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    int capacity;
+                    try {
+                        capacity = Integer.parseInt(capStr);
+                    } catch (NumberFormatException e) {
+                        Toast.makeText(requireContext(), "Sức chứa không hợp lệ!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    Room r = new Room(0, name, capacity, location, 1);
+                    repo.insertRoom(r, new DataCallback<Long>() {
+                        @Override
+                        public void onSuccess(Long id) {
+                            Toast.makeText(requireContext(), "Thêm phòng học thành công!", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onError(String message) {
+                            new MaterialAlertDialogBuilder(requireContext())
+                                    .setTitle("Lỗi thêm phòng học")
+                                    .setMessage(message)
+                                    .setPositiveButton("Đồng ý", null)
+                                    .show();
+                        }
+                    });
+                })
+                .setNegativeButton("Hủy", null)
+                .show();
+    }
+
+    private void showRoomActionDialog(Room room, ClassRepository repo) {
+        String[] options = {"Xóa phòng học"};
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle(room.getName() + " (" + room.getCapacity() + " chỗ ngồi)")
+                .setItems(options, (dialog, which) -> {
+                    if (which == 0) {
+                        new MaterialAlertDialogBuilder(requireContext())
+                                .setTitle("Xác nhận xóa phòng học")
+                                .setMessage("Bạn có chắc chắn muốn xóa " + room.getName() + " không?")
+                                .setPositiveButton("Xóa", (d, w) -> {
+                                    repo.deleteRoom(room.getId(), new DataCallback<Boolean>() {
+                                        @Override
+                                        public void onSuccess(Boolean result) {
+                                            Toast.makeText(requireContext(), "Xóa phòng học thành công!", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        @Override
+                                        public void onError(String message) {
+                                            new MaterialAlertDialogBuilder(requireContext())
+                                                    .setTitle("Không thể xóa phòng học")
+                                                    .setMessage(message)
+                                                    .setPositiveButton("Đồng ý", null)
+                                                    .show();
+                                        }
+                                    });
+                                })
+                                .setNegativeButton("Hủy", null)
+                                .show();
+                    }
+                })
+                .setNegativeButton("Đóng", null)
+                .show();
+    }
+
+    private void showChangePasswordDialog() {
+        DialogChangePasswordBinding dialogBinding = DialogChangePasswordBinding.inflate(getLayoutInflater());
+
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Đổi mật khẩu")
+                .setView(dialogBinding.getRoot())
+                .setPositiveButton("Lưu mật khẩu", (dialog, which) -> {
+                    String oldPass = dialogBinding.etOldPassword.getText() != null
+                            ? dialogBinding.etOldPassword.getText().toString().trim() : "";
+                    String newPass = dialogBinding.etNewPassword.getText() != null
+                            ? dialogBinding.etNewPassword.getText().toString().trim() : "";
+                    String confirmPass = dialogBinding.etConfirmPassword.getText() != null
+                            ? dialogBinding.etConfirmPassword.getText().toString().trim() : "";
+
+                    if (oldPass.isEmpty()) {
+                        Toast.makeText(requireContext(), "Vui lòng nhập mật khẩu hiện tại!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (newPass.length() < 6) {
+                        Toast.makeText(requireContext(), "Mật khẩu mới phải có ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (!newPass.equals(confirmPass)) {
+                        Toast.makeText(requireContext(), "Xác nhận mật khẩu mới không khớp!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    AuthRepository authRepo = new AuthRepository(requireContext());
+                    authRepo.changePassword(sessionManager.getUserId(), oldPass, newPass, new DataCallback<Boolean>() {
+                        @Override
+                        public void onSuccess(Boolean result) {
+                            Toast.makeText(requireContext(), "Đổi mật khẩu thành công!", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onError(String message) {
+                            new MaterialAlertDialogBuilder(requireContext())
+                                    .setTitle("Đổi mật khẩu thất bại")
+                                    .setMessage(message)
+                                    .setPositiveButton("Đồng ý", null)
+                                    .show();
+                        }
+                    });
+                })
+                .setNegativeButton("Hủy", null)
                 .show();
     }
 
